@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steam Cards - SC</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to steam cards page, here you can find most popular cards.">
+  <meta name="keywords" content="cards, dota 2, portal 2, gems,">
+  <meta name="author" content="Vuk Lekić">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/icon.ico" type="image/ico" sizes="128x128">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <link rel="stylesheet" href="css/alertify.min.css" />
+  <link rel="stylesheet" href="css/alertify.rtl.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/themes/semantic.min.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="modal-window" id="registration">
+    <div class="modal-main">
+      <span class="close-modal">&times;</span>
+      <div class="modal-header">
+        <h3>Register</h3>
+      </div>
+      <div class="modal-footer">
+      <div class="form">
+        <form class="register-form">
+          <input id="username2" required type="text" placeholder="username"/>
+          <p class="greska" id="logKorImeGreska2"></p>
+          <input id="password2" required type="password" placeholder="password"/>
+          <p class="greska" id="logLozGreska2"></p>
+          <input id="email" required type="text" placeholder="email address"/>
+          <p class="greska" id="emailGreska"></p>
+        <button id="prijava2" type="button">create</button>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="modal-window" id="login">
+    <div class="modal-main">
+      <span class="close-modal">&times;</span>
+      <div class="modal-header">
+        <h3>Member Login</h3>
+      </div>
+      <div class="modal-footer">
+        <div class="form">
+          <form name="loginform" action="index.html" class="login-form" method="post">
+           <input id="username" required type="text" placeholder="username"/>
+           <p class="greska" id="logKorImeGreska"></p>
+           <input id="password" required type="password" placeholder="password"/>
+           <p class="greska" id="logLozGreska"></p>
+           <button id="prijava" type="button">login</button>
+          </form>
+       </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar is-link ">
+    <div class="container is-fluid">
+      <div class="navbar-brand">
+        <a href="index.html" class="navbar-item is-size-6 is-uppercase">
+          <h1>Steam Cards</h1>
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroB" class="navbar-menu">
+        <div class="navbar-end">
+          <span class="navbar-item is-uppercase">
+            <button data-target="#login" href="#" class="button is-info is-inverted navbar-button modal-toggle">
+              <span>Login</span>
+            </button>
+          </span>
+          <span class="navbar-item is-uppercase no-padding-left">
+            <button data-target="#registration" href="register.html" class="button is-info is-inverted is-outlined navbar-button modal-toggle">
+              <span>Register</span>
+            </button>
+          </span>
+          <span class="navbar-item">
+            <i data-count="0" class="fa fa-shopping-cart fa-2x icon-white badge"></i>
+            <span class="badge"></span>
+            <span class="inner-badge">0</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="okvir" class="container-fluid">
+    <div id="content-bg" class="columns is-mobile">
+      <div class="column no-padding-bottom">
+        <div id="okvir-desno-min" class="hero auto-full-height is-dark is-bold">
+          <div class="hero-body">
+            <!-- sidebar -->
+            <aside class="section sidebar">
+              <div class="container">
+                <ul class="has-text-centered">
+                  <li>
+                    <button data-target="#login" href="#" class="button is-info is-inverted navbar-button modal-toggle">
+                      <span>Login</span>
+                    </a>
+                  </li>
+                  <li>
+                    <button data-target="#registration" href="register.html" class="button is-info is-inverted is-outlined navbar-button modal-toggle">
+                    <span>Register</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <aside class="menu">
+              <p class="menu-label">Search Card</p>
+                <div class="field has-addons">
+                  <div class="control">
+                    <input id="searchField" class="input" type="text" placeholder="Search card name" />
+                  </div>
+
+                </div>
+
+              <p class="menu-label">Filter By Type</p>
+              <div id="category">
+
+              </div>
+
+            </aside>
+            <aside class="columns is-variable is-8">
+            <div id="stk">
+              <div class="stiker">
+                <img src="images/img9.png" alt="">
+              </div>
+              <div class="stiker">
+                <img src="images/img10.png" alt="">
+              </div>
+              </div>
+           </aside>
+          </div>
+        </div>
+      </div>
+
+      <div class="column auto-full-height is-three-quarters no-padding-bottom padding-inset scroll-y">
+        <div class="columns is-multiline" id="cards">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- SPINNER -->
+   <div id="loader" class=""></div>
+  <!-- MODAL -->
+  <footer class="hero is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns has-text-centered is-variable is-8">
+          <div class="column">
+            <div class="imghead">
+              <img src="images/img7.png" alt="slika5">
+            </div>
+          </div>
+          <div class="column">
+            <p class="menu-label">
+              General
+            </p>
+            <ul class="menu-list">
+              <li>
+                <a class="footer-link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="footer-link" href="cards.html">Cards</a>
+              </li>
+              <li>
+                <a class="footer-link" href="documentation.pdf">Documentation</a>
+              </li>
+              <li>
+                <a class="footer-link" href="o_autoru.html">Author</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <div class="imghead">
+              <img src="images/img8.png" alt="slika5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script src="js/main.js"></script> -->
+  <script src="js/alertify.min.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/forma.js"></script>
+  <script src="js/storeModal.js"></script>
+  <script src="js/object.js"></script>
+  <script src="js/showcards.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/jquery.js" type="text/javascript"></script>
+</body>
+
+</html>

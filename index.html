@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steam Cards - SC</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to Steam Cards service.">
+  <meta name="keywords" content="Steam Cards,cards,levelup,steam,lvl,dota2 cards,about,service">
+  <meta name="author" content="Vuk lekić">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/icon.ico" type="image/ico" sizes="128x128">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="modal-window" id="registration">
+    <div class="modal-main">
+      <span class="close-modal">&times;</span>
+      <div class="modal-header">
+        <h3>Register</h3>
+      </div>
+      <div class="modal-footer">
+        <div class="form">
+          <form class="register-form">
+            <input id="username2" type="text" placeholder="username"/>
+            <p class="greska" id="logKorImeGreska2"></p>
+            <input id="password2" type="password" placeholder="password"/>
+            <p class="greska" id="logLozGreska2"></p>
+            <input id="email" type="text" placeholder="email address"/>
+            <p class="greska" id="emailGreska"></p>
+          <button id="prijava2" type="button">create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-window" id="login">
+    <div class="modal-main">
+      <span class="close-modal">&times;</span>
+      <div class="modal-header">
+        <h3>Member Login</h3>
+      </div>
+      <div class="modal-footer">
+        <div class="form">
+          <form name="loginform" action="index.html" class="login-form" method="post">
+           <input id="username" required type="text" placeholder="username"/>
+           <p class="greska" id="logKorImeGreska"></p>
+           <input id="password" required type="password" placeholder="password"/>
+           <p class="greska" id="logLozGreska"></p>
+           <button id="prijava" type="button">login</button>
+          </form>
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <section class="hero is-bold is-link is-fullheight landing">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a href="index.html" class="navbar-item is-size-6 is-uppercase">
+              <h1>Steam Cards</h1>
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroB" class="navbar-menu">
+            <div class="navbar-end">
+              <a href="cards.html" class="navbar-item is-uppercase">Cards</a>
+              <a id="services" href="#services" class="navbar-item is-uppercase">
+                Services
+              </a>
+              <a id="about" href="#about" class="navbar-item is-uppercase">
+                About
+              </a>
+              <a id="contactLink" href="#contact" class="navbar-item is-uppercase">
+                Contact
+              </a>
+              <span class="navbar-item is-uppercase">
+                <button href="#" data-target="#login" class="button is-info is-inverted navbar-button modal-toggle">
+                  <span>Login</span>
+                </button>
+              </span>
+              <span class="navbar-item is-uppercase no-padding-left">
+                <a href="#" data-target="#registration" class="button is-info is-inverted is-outlined navbar-button modal-toggle">
+                  <span>Register</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-right">
+        <h1 class=" cta-heading title is-size-1 is-uppercase has-text-weight-light">Steam Cards</h1>
+            <p class="subtitle has-text-weight-light">
+               Rank up Steam Level fast and cheap!
+            </p>
+            <a href="cards.html" class="button is-link is-inverted is-outlined is-uppercase">Browse Cards</a>
+      </div>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-left">
+        <h1 class=" cta-heading title is-size-1 is-uppercase has-text-weight-light">Powered by STEAM</h1>
+      </div>
+    </div>
+  </section>
+  <!-- sidebar -->
+  <aside class="section sidebar">
+    <div class="container">
+      <ul class="has-text-centered">
+        <li>
+          <a href="index.html" class="is-uppercase is-size-3">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="cards.html" class="is-uppercase is-size-3">
+            Cards
+          </a>
+        </li>
+        <li>
+          <a id="#services" href="#services" class="is-uppercase is-size-3">
+            Services
+          </a>
+        </li>
+        <li>
+          <a id="about" href="#about" class="is-uppercase is-size-3">
+            About
+          </a>
+        </li>
+        <li>
+          <a id="#contactLink" href="#contact" class="is-uppercase is-size-3">
+            Contact
+          </a>
+        </li>
+        <li>
+          <button data-target="#login" href="#" class="button is-info is-inverted navbar-button modal-toggle">
+            <span>Login</span>
+          </button>
+        </li>
+        <li>
+          <button data-target="#registration" href="register.html" class="button is-info is-inverted is-outlined navbar-button modal-toggle">
+          <span>Register</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- slajder -->
+<div id="profilesSection" class="hero is-light is-bold is-medium">
+<div class="slajder-container">
+
+ <div class="mySlajder fade">
+   <img src="images/img1.jpg">
+   <div class="text">Level 63</div>
+ </div>
+
+ <div class="mySlajder fade">
+   <img src="images/img2.jpg">
+   <div class="text">Level 31</div>
+ </div>
+
+ <div class="mySlajder fade">
+   <img src="images/img3.jpg">
+   <div class="text">Level 1540</div>
+ </div>
+
+ <!-- next, prev -->
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- dots -->
+<div style="text-align:center">
+ <span class="dot" onclick="trenutniSlajd(1)"></span>
+ <span class="dot" onclick="trenutniSlajd(2)"></span>
+ <span class="dot" onclick="trenutniSlajd(3)"></span>
+</div>
+</div>
+  <!-- SERVICES -->
+  <section id="servicesSection" class="hero is-white is-bold is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-variable is-8">
+          <div class="column">
+            <div class="imghead">
+              <img src="images/img4.jpg" alt="slika4">
+            </div>
+            <div class="textby">
+                  When you get started, it takes 100 XP to get to the next level.
+                  The amount needed to level up increases every 10 levels, meaning
+                  after Steam Level 10 you'll need 200XP per level, after level 20 you'll need 300XP per level, etc.
+            </div>
+            </div>
+
+            <div class="column">
+              <div class="imghead">
+                <img src="images/img5.jpg" alt="slika5">
+              </div>
+              <div class="textby">
+                This bot is an fully automatic level up service, which allows you to exchange your
+                CS:GO keys for complete trading card sets, who are ready to be crafted and to increase your level.
+
+              </div>
+              </div>
+
+              <div class="column"  >
+                <div class="imghead" style="background-color:white">
+                  <img src="images/img6.jpg" alt="slika6">
+                </div>
+                <div class="textby">
+                      Steam Gems are earned by converting the items in your steam inventory.
+                      With a value (10 -100) range per item of your Cards, Backgrounds or Emoticons.
+                      Sack of gems (1000 gems) worth 0.50€.
+                </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT -->
+  <section class="hero is-light is-bold is-medium" id="aboutSection">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-three-quarters has-text-justified">
+            <h2 class="title">
+              Steam Cards
+            </h2>
+            <h3 class="subtitle">
+              Fast and safety LvLUp service
+            </h3>
+            <div class="content">
+              <p>
+                We all love to level up. Scratching the XP itch feels good, so much so that Steam itself got in on the action.
+                Every Steam user has a level, with higher levels granting bonuses like extra slots on your friends list and higher
+                drop rates for booster card packs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTACT -->
+  <section id="contactSection" class="hero is-link is-bold is-small ">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-two-thirds">
+            <p class="control has-icons-left has-icons-right">
+              <input id="newsletter" class="input" type="email" placeholder="Enter your email address..."/>
+              <span class="icon is-small is-left">
+                <i id="envelope" class="fas fa-envelope"></i>
+              </span>
+            </p>
+          </div>
+          <div class="column has-text-right">
+            <h3 class="title has-text-weight-light">
+              Let's stay in touch.
+            </h3>
+            <h4 class="subtitle has-text-weight-light">
+              with new cards
+            </h4>
+            <button id="subscribeBtn" class="button is-info is-inverted is-outlined navbar-button">
+              <span> Subscribe
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="hero is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns has-text-centered is-variable is-8">
+          <div class="column">
+            <div class="imghead">
+              <img src="images/img7.png" alt="slika5">
+            </div>
+          </div>
+          <div class="column">
+            <p class="menu-label">
+              General
+            </p>
+            <ul class="menu-list">
+              <li>
+                <a class="footer-link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="footer-link" href="cards.html">Cards</a>
+              </li>
+              <li>
+                <a class="footer-link" href="documentation.pdf">Documentation</a>
+              </li>
+              <li>
+                <a class="footer-link" href="o_autoru.html">Author</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <div class="imghead">
+              <img src="images/img8.png" alt="slika5">
+            </div>
+          </div>
+ <button id="myBtn" title="TO TOP"></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JS -->
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/storeModal.js"></script>
+  <script src="js/forma.js"></script>
+</body>
+</html>
